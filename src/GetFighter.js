@@ -25,7 +25,7 @@ function GetFighter() {
   const options = {
     method: 'GET',
     headers: {
-        'X-RapidAPI-Key': '94cb9c8083mshdf11211cc271d52p191c86jsn5bf3ddd029e6',
+        'X-RapidAPI-Key': process.env.REACT_APP_HERO_API,
         'X-RapidAPI-Host': 'superhero-search.p.rapidapi.com'
     } 
   }
@@ -41,10 +41,15 @@ function GetFighter() {
     <div className="Battle">
   
       <p>{fighter.name}</p>
-      <p>{fighter.id}</p>
-      <p>{fighter.slug}</p>
-      <img src={fighter.images.md} alt="" />
       <p>Strength: {fighter.powerstats.strength}</p>
+      <p>Intelligence: {fighter.powerstats.intelligence}</p>
+      <p>Power: {fighter.powerstats.power}</p>
+      <p>Combat: {fighter.powerstats.combat}</p>
+      <p>Durability: {fighter.powerstats.durability}</p>
+      <p>peed: {fighter.powerstats.speed}</p>
+
+      <img src={fighter.images.md} alt="" />
+      
     </div>
   )
     
