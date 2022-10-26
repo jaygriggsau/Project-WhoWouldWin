@@ -12,11 +12,13 @@ const initialfighterData = {
     durability: undefined,
     intelligence: undefined,
     speed: undefined
-  }
+  },
+  search: undefined
 }
 
 function GetFighter() {
   const [fighter, setFighter] = useState(initialfighterData)
+  const [searchFighter, setSearchFighter] = useState(initialfighterData)
 
   let fighterSerachName = "hulk"
 
@@ -36,17 +38,31 @@ function GetFighter() {
     .then(res => res.json())
     .then(res => {setFighter(res)})
   }, [])
+
+  const searchInput = event => {
+    const newContent = event.target.value
+    setSearchFighter(newContent)
+    console.log(newContent)
+  }
+  
+  const fetchFighter = () => {
+    console.log(searchFighter) //syntheticBaseEvent as response
+    fighterSerachName = searchFighter
+  }
     
   return (
     <div className="Battle">
-  
+    
+      <input type="text" onChange={searchInput}/>
+      <button onClick={fetchFighter}>Get Fighter</button>
+    
       <p>{fighter.name}</p>
       <p>Strength: {fighter.powerstats.strength}</p>
       <p>Intelligence: {fighter.powerstats.intelligence}</p>
       <p>Power: {fighter.powerstats.power}</p>
       <p>Combat: {fighter.powerstats.combat}</p>
       <p>Durability: {fighter.powerstats.durability}</p>
-      <p>peed: {fighter.powerstats.speed}</p>
+      <p>Speed: {fighter.powerstats.speed}</p>
 
       <img src={fighter.images.md} alt="" />
       
