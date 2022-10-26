@@ -16,7 +16,7 @@ const initialfighterData = {
   search: "hulk"
 }
 
-function GetFighter() {
+function GetFighterOne() {
   const [fighter, setFighter] = useState(initialfighterData)
   
   const searchInput = event => {
@@ -47,7 +47,7 @@ function GetFighter() {
     
       <input type="text" onChange={searchInput}/>
       <button onClick={fetchFighter}>Get Fighter</button>
-    
+      {/* only show if defined */}
       <p>{fighter.name}</p>
       <p>Strength: {fighter.powerstats.strength}</p>
       <p>Intelligence: {fighter.powerstats.intelligence}</p>
@@ -66,4 +66,4 @@ function GetFighter() {
 
 }
 
-export default GetFighter
+export default GetFighterOne
