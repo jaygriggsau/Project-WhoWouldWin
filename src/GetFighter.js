@@ -13,45 +13,37 @@ const initialfighterData = {
     intelligence: undefined,
     speed: undefined
   },
-  search: undefined
+  search: "hulk"
 }
 
 function GetFighter() {
   const [fighter, setFighter] = useState(initialfighterData)
-  const [searchFighter, setSearchFighter] = useState(initialfighterData)
-
-  let fighterSerachName = "hulk"
-
-  const url = `https://superhero-search.p.rapidapi.com/api/?hero=${fighterSerachName}`
-
-  const options = {
-    method: 'GET',
-    headers: {
-        'X-RapidAPI-Key': process.env.REACT_APP_HERO_API,
-        'X-RapidAPI-Host': 'superhero-search.p.rapidapi.com'
-    } 
-  }
-
-  //Does this need to be Async?
-  useEffect(() => {
-    fetch(url, options) 
-    .then(res => res.json())
-    .then(res => {setFighter(res)})
-  }, [])
-
+  
   const searchInput = event => {
     const newContent = event.target.value
-    setSearchFighter(newContent)
     console.log(newContent)
+    fighter.search = newContent
   }
   
   const fetchFighter = () => {
-    console.log(searchFighter) //syntheticBaseEvent as response
-    fighterSerachName = searchFighter
+    console.log(fighter.search)
+
+    const url = `https://superhero-search.p.rapidapi.com/api/?hero=${fighter.search}`
+
+    const options = {
+      method: 'GET',
+      headers: {
+          'X-RapidAPI-Key': process.env.REACT_APP_HERO_API,
+          'X-RapidAPI-Host': 'superhero-search.p.rapidapi.com'
+      } 
+    }
+    fetch(url, options) 
+      .then(res => res.json())
+      .then(res => {setFighter(res)})
   }
     
   return (
-    <div className="Battle">
+    <div className="BattlePage">
     
       <input type="text" onChange={searchInput}/>
       <button onClick={fetchFighter}>Get Fighter</button>
@@ -75,54 +67,3 @@ function GetFighter() {
 }
 
 export default GetFighter
-
-/////////// Code Variation Below
-
-// import { useState, useEffect } from 'react'
-
-// function GetFighter() {
-//   const [fighter1, setFighter] = useState("") // is this resetting each time?
-
-//   const url = `https://superhero-search.p.rapidapi.com/api/?hero=thanos`;
-
-//   const options = {
-//     method: 'GET',
-//     headers: {
-//         'X-RapidAPI-Key': '94cb9c8083mshdf11211cc271d52p191c86jsn5bf3ddd029e6',
-//         'X-RapidAPI-Host': 'superhero-search.p.rapidapi.com'
-//     } 
-//   } 
-
-//   const fetchFighterData = () => {
-//     fetch(url, options) 
-//     .then(res => res.json())
-//     .then(res => { 
-//     let fighter = res
-//     console.log(fighter) //Working
-//     console.log(fighter.name) //Working
-//     console.log(fighter['images']['md']) //Working
-//     setFighter(fighter.name)
-//     // setFighter(fighter)
-//     })
-//   }
-
-//   //add handler for updating state
-
-//   const setFighterState = () => {
-//     setFighter(fetchFighterData)
-//     console.log(fetchFighterData())
-//     console.log(fighter1) 
-//   }
-  
-//   return (
-//     <div className="Battle">
-//     <button onClick={setFighterState}>
-//       Select Fighter
-//     </button>
-
-//   </div>
-//   )
-
-// }
-
-// // export default GetFighter
