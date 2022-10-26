@@ -81,7 +81,7 @@ function GetFighters() {
         <input type="text" onChange={searchInput}/>
         <button onClick={fetchFighter}>Get Fighter</button>
         {/* only show if defined */}
-        <p>{fighter.name}</p>
+        <h2>{fighter.name}</h2>
         <p>Strength: {fighter.powerstats.strength}</p>
         <p>Intelligence: {fighter.powerstats.intelligence}</p>
         <p>Power: {fighter.powerstats.power}</p>
@@ -91,7 +91,7 @@ function GetFighters() {
 
         <img src={fighter.images.md} alt="" />
       </section>
-      <section>
+      <section className='letsFightButton'>
         <button onClick={letsFight}>Fight</button>
         <p>{winner}</p>
       </section>
@@ -99,7 +99,7 @@ function GetFighters() {
         <input type="text" onChange={searchInput}/>
         <button onClick={fetchFighterTwo}>Get Fighter</button>
         {/* only show if defined */}
-        <p>{fighterTwo.name}</p>
+        <h2>{fighterTwo.name}</h2>
         <p>Strength: {fighterTwo.powerstats.strength}</p>
         <p>Intelligence: {fighterTwo.powerstats.intelligence}</p>
         <p>Power: {fighterTwo.powerstats.power}</p>

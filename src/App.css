@@ -8,12 +8,21 @@ p {
 }
 
 .fighterBox {
+  background-color: rgb(31, 60, 85);
+  color: white;
   border: 1px solid black;
-  
+  text-align: left;
 }
 
   .BattlePage {
     display: flex;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     justify-content: center;
+  }
+
+  .letsFightButton{
+    display: block;
+    margin-left: 25px;
+    margin-right: 25px;
+    align-items: center;
   }
