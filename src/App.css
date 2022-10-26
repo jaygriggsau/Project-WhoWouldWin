@@ -13,11 +13,22 @@ body {
 p {
   padding: 0px;
   margin: 0px;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: 18px;
+}
+
+h1 {
+  font-family: 'Rubik Dirt', cursive;
+  color: white;
+  font-size: 60px;
+  margin-bottom: 10px;
 }
 
 input {
   margin: 5px;
+  font-family: 'Merriweather Sans', sans-serif;
 }
+
 .fighterBox {
   background-color: rgb(31, 60, 85);
   color: white;
@@ -26,47 +37,69 @@ input {
   text-align: left;
 }
 
-  .BattlePage {
-    display: flex;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    justify-content: center;
-  }
+.BattlePage {
+  display: flex;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  justify-content: center;
+}
 
-  .letsFightButton{
-    display: block;
-    margin-left: 25px;
-    margin-right: 25px;
-    align-items: center;
-  }
+.letsFightButton{
+  display: block;
+  margin-left: 25px;
+  margin-right: 25px;
+  align-items: center;
+}
 
-  button, input[type="submit"], input[type="reset"] {
-    background: none;
-    color: inherit;
-    border: none;
-    padding: 0;
-    font: inherit;
-    cursor: pointer;
-    outline: inherit;
-  }
+button, input[type="submit"], input[type="reset"] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
 
-  img {
-    /* Start the shake animation and make the animation last for 0.5 seconds */
-    animation: shake 1s;
-  
-    /* When the animation is finished, start again */
-    animation-iteration-count: infinite;
-  }
-  
-  @keyframes shake {
-    0% { transform: translate(1px, 1px) rotate(0deg); }
-    10% { transform: translate(-1px, -2px) rotate(-1deg); }
-    20% { transform: translate(-3px, 0px) rotate(1deg); }
-    30% { transform: translate(3px, 2px) rotate(0deg); }
-    40% { transform: translate(1px, -1px) rotate(1deg); }
-    50% { transform: translate(-1px, 2px) rotate(-1deg); }
-    60% { transform: translate(-3px, 1px) rotate(0deg); }
-    70% { transform: translate(3px, 1px) rotate(-1deg); }
-    80% { transform: translate(-1px, -1px) rotate(1deg); }
-    90% { transform: translate(1px, 2px) rotate(0deg); }
-    100% { transform: translate(1px, -2px) rotate(-1deg); }
-  }
+button {
+  background: #b83030;
+  -webkit-border-radius: 27;
+  -moz-border-radius: 27;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 1px 3px #666666;
+  -moz-box-shadow: 0px 1px 3px #666666;
+  box-shadow: 0px 1px 3px #666666;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 15px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  margin: 5px;
+  font-family: 'Merriweather Sans', sans-serif;
+}
+
+button:hover {
+  background: #000000;
+  text-decoration: none;
+}
+
+img {
+  /* Start the shake animation and make the animation last for 0.5 seconds */
+  animation: shake 1s;
+
+  /* When the animation is finished, start again */
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
