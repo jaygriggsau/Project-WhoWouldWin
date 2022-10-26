@@ -3,7 +3,7 @@
 }
 
 body {
-  background: url(images/bg.jpg) no-repeat center center fixed; 
+  background: url(../public/Images/bg.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -14,7 +14,7 @@ p {
   padding: 0px;
   margin: 0px;
   font-family: 'Merriweather Sans', sans-serif;
-  font-size: 18px;
+  font-size: 15px;
 }
 
 h1 {
@@ -88,6 +88,7 @@ button {
 button:hover {
   background: #000000;
   text-decoration: none;
+  transform: scale(1.1);
 }
 
 img {
