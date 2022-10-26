@@ -7,7 +7,7 @@ function App() {
       <section>
         <h1>Who Would Win</h1>
       </section>
-      <section class="fighterBox">
+      <section className='mainContent'>
         <GetFighters />
       </section>
     </div>

@@ -19,6 +19,7 @@ const initialfighterData = {
 function GetFighters() {
   const [fighter, setFighter] = useState(initialfighterData)
   const [fighterTwo, setFighterTwo] = useState(initialfighterData)
+  const [winner, setWinner]=useState("")
   
   const searchInput = event => {
     const newContent = event.target.value
@@ -59,24 +60,42 @@ function GetFighters() {
       .then(res => res.json())
       .then(res => {setFighterTwo(res)})
   }
+
+  const letsFight = () => {
+    let fighterOneScore = fighter.powerstats.strength + fighter.powerstats.intelligence + fighter.powerstats.power + fighter.powerstats.combat + fighter.powerstats.durability + fighter.powerstats.speed
+
+    let fighterTwoScore = fighterTwo.powerstats.strength + fighterTwo.powerstats.intelligence + fighterTwo.powerstats.power + fighterTwo.powerstats.combat + fighterTwo.powerstats.durability + fighterTwo.powerstats.speed
+
+    if (fighterOneScore > fighterTwoScore){
+      console.log(fighter.name)
+      setWinner(fighter.name)
+    } else {
+      console.log(fighterTwo.name)
+      setWinner(fighterTwo.name)
+    }
+  }
     
   return (
     <div className="BattlePage">
-      <section>
-      <input type="text" onChange={searchInput}/>
-      <button onClick={fetchFighter}>Get Fighter</button>
-      {/* only show if defined */}
-      <p>{fighter.name}</p>
-      <p>Strength: {fighter.powerstats.strength}</p>
-      <p>Intelligence: {fighter.powerstats.intelligence}</p>
-      <p>Power: {fighter.powerstats.power}</p>
-      <p>Combat: {fighter.powerstats.combat}</p>
-      <p>Durability: {fighter.powerstats.durability}</p>
-      <p>Speed: {fighter.powerstats.speed}</p>
+      <section className='fighterBox'>
+        <input type="text" onChange={searchInput}/>
+        <button onClick={fetchFighter}>Get Fighter</button>
+        {/* only show if defined */}
+        <p>{fighter.name}</p>
+        <p>Strength: {fighter.powerstats.strength}</p>
+        <p>Intelligence: {fighter.powerstats.intelligence}</p>
+        <p>Power: {fighter.powerstats.power}</p>
+        <p>Combat: {fighter.powerstats.combat}</p>
+        <p>Durability: {fighter.powerstats.durability}</p>
+        <p>Speed: {fighter.powerstats.speed}</p>
 
-      <img src={fighter.images.md} alt="" />
+        <img src={fighter.images.md} alt="" />
       </section>
       <section>
+        <button onClick={letsFight}>Fight</button>
+        <p>{winner}</p>
+      </section>
+      <section  className='fighterBox'>
         <input type="text" onChange={searchInput}/>
         <button onClick={fetchFighterTwo}>Get Fighter</button>
         {/* only show if defined */}
