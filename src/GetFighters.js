@@ -16,8 +16,9 @@ const initialfighterData = {
   search: "hulk"
 }
 
-function GetFighterOne() {
+function GetFighters() {
   const [fighter, setFighter] = useState(initialfighterData)
+  const [fighterTwo, setFighterTwo] = useState(initialfighterData)
   
   const searchInput = event => {
     const newContent = event.target.value
@@ -41,10 +42,27 @@ function GetFighterOne() {
       .then(res => res.json())
       .then(res => {setFighter(res)})
   }
+
+  const fetchFighterTwo = () => {
+    console.log(fighterTwo.search)
+
+    const url = `https://superhero-search.p.rapidapi.com/api/?hero=${fighter.search}`
+
+    const options = {
+      method: 'GET',
+      headers: {
+          'X-RapidAPI-Key': process.env.REACT_APP_HERO_API,
+          'X-RapidAPI-Host': 'superhero-search.p.rapidapi.com'
+      } 
+    }
+    fetch(url, options) 
+      .then(res => res.json())
+      .then(res => {setFighterTwo(res)})
+  }
     
   return (
     <div className="BattlePage">
-    
+      <section>
       <input type="text" onChange={searchInput}/>
       <button onClick={fetchFighter}>Get Fighter</button>
       {/* only show if defined */}
@@ -57,6 +75,22 @@ function GetFighterOne() {
       <p>Speed: {fighter.powerstats.speed}</p>
 
       <img src={fighter.images.md} alt="" />
+      </section>
+      <section>
+        <input type="text" onChange={searchInput}/>
+        <button onClick={fetchFighterTwo}>Get Fighter</button>
+        {/* only show if defined */}
+        <p>{fighterTwo.name}</p>
+        <p>Strength: {fighterTwo.powerstats.strength}</p>
+        <p>Intelligence: {fighterTwo.powerstats.intelligence}</p>
+        <p>Power: {fighterTwo.powerstats.power}</p>
+        <p>Combat: {fighterTwo.powerstats.combat}</p>
+        <p>Durability: {fighterTwo.powerstats.durability}</p>
+        <p>Speed: {fighterTwo.powerstats.speed}</p>
+
+        <img src={fighterTwo.images.md} alt="" />
+      </section>
+      
       
     </div>
   )
@@ -66,4 +100,4 @@ function GetFighterOne() {
 
 }
 
-export default GetFighterOne
+export default GetFighters

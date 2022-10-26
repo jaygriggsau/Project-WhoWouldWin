@@ -1,7 +1,5 @@
 import './App.css';
-import Battle from './Battle';
-import GetFighterOne from './GetFighterOne';
-import GetFighterTwo from './GetFighterTwo';
+import GetFighters from './GetFighters';
 
 function App() {
   return (
@@ -10,12 +8,8 @@ function App() {
         <h1>Who Would Win</h1>
       </section>
       <section class="fighterBox">
-        <GetFighterOne />
+        <GetFighters />
       </section>
-      <section class="fighterBox">
-        <GetFighterTwo />
-      </section>
-      
     </div>
   );
 }
