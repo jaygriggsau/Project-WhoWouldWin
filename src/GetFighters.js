@@ -1,4 +1,11 @@
 import { useState, useEffect } from 'react'
+import speed from './Images/speed.png'
+import combat from './Images/combat.png'
+import durability from './Images/durability.png'
+import intelligence from './Images/intelligence.png'
+import strength from './Images/strength.png'
+import power from './Images/power.png'
+
 
 const initialfighterData = {
   name: undefined,
@@ -82,17 +89,27 @@ function GetFighters() {
         <button onClick={fetchFighter}>Get Fighter</button>
         {/* only show if defined */}
         <h2>{fighter.name}</h2>
-        <p>Strength: {fighter.powerstats.strength}</p>
-        <p>Intelligence: {fighter.powerstats.intelligence}</p>
-        <p>Power: {fighter.powerstats.power}</p>
-        <p>Combat: {fighter.powerstats.combat}</p>
-        <p>Durability: {fighter.powerstats.durability}</p>
-        <p>Speed: {fighter.powerstats.speed}</p>
+          <section className="fighterStatsTop">
+            <img src={strength} alt="" className='icon' />
+            <p>{fighter.powerstats.strength}</p>
+            <img src={intelligence} alt=""className='icon' />
+            <p>{fighter.powerstats.intelligence}</p>
+            <img src={power} alt="" className='icon' />
+            <p>{fighter.powerstats.power}</p>
+          </section>
+          <section className="fighterStatsBottom">
+              <img src={combat} alt="" className='icon' />
+              <p>{fighter.powerstats.combat}</p>
+              <img src={durability} alt="" className='icon' />
+              <p>{fighter.powerstats.durability}</p>
+              <img src={speed} alt="" className='icon' />
+              <p>{fighter.powerstats.speed}</p>
+          </section>
 
-        <img src={fighter.images.md} alt="" />
+        <img src={fighter.images.md} className="shakeImg" alt="" />
       </section>
-      <section className='letsFightButton'>
-        <button onClick={letsFight}>Fight</button>
+      <section >
+        <button onClick={letsFight} className='letsFightButton'>Fight</button>
         <p>{winner}</p>
       </section>
       <section  className='fighterBox'>
@@ -100,7 +117,7 @@ function GetFighters() {
         <button onClick={fetchFighterTwo}>Get Fighter</button>
         {/* only show if defined */}
         <h2>{fighterTwo.name}</h2>
-        
+
         <p>Strength: {fighterTwo.powerstats.strength}</p>
         <p>Intelligence: {fighterTwo.powerstats.intelligence}</p>
         <p>Power: {fighterTwo.powerstats.power}</p>
@@ -108,7 +125,7 @@ function GetFighters() {
         <p>Durability: {fighterTwo.powerstats.durability}</p>
         <p>Speed: {fighterTwo.powerstats.speed}</p>
 
-        <img src={fighterTwo.images.md} alt="" />
+        <img src={fighterTwo.images.md} className="shakeImg" alt="" />
       </section>
       
       
