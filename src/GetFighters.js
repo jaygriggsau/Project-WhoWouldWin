@@ -100,6 +100,7 @@ function GetFighters() {
         <button onClick={fetchFighterTwo}>Get Fighter</button>
         {/* only show if defined */}
         <h2>{fighterTwo.name}</h2>
+        
         <p>Strength: {fighterTwo.powerstats.strength}</p>
         <p>Intelligence: {fighterTwo.powerstats.intelligence}</p>
         <p>Power: {fighterTwo.powerstats.power}</p>
