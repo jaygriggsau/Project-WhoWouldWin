@@ -140,5 +140,13 @@ button {
 
 #winnerText {
   font-size: 40px;
-  background-color: black;
+  padding: 5px;
+  margin: 8px;
+}
+
+.instructions {
+  display: flex;
+  max-width: 490px;
+  justify-content: center;
+  margin: 0 auto;
 }

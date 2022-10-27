@@ -95,6 +95,7 @@ function GetFighters() {
 
   return (
     <div className="BattlePage">
+      
       <section className='fighterBox'>
         <input type="text" onChange={searchInput}/>
         <button onClick={fetchFighter}>Get Fighter</button>
@@ -127,6 +128,9 @@ function GetFighters() {
         <section className="winnersArea">
           <h2 id='winnerText' style={{color: "white"}}>{winner}</h2>
           <img src={loadingScreen} alt="" className='loadingGif'/>
+        </section>
+        <section>
+
         </section>
       </section>
       
