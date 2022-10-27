@@ -91,7 +91,7 @@ function GetFighters() {
       <section className='fighterBox'>
         <input type="text" onChange={searchInput}/>
         <button onClick={fetchFighter}>Get Fighter</button>
-        {/* only show if defined */}
+
         <h2>{fighter.name}</h2>
           <section className="fighterStatsTop">
             <img src={strength} alt="" className='icon' />
@@ -109,22 +109,24 @@ function GetFighters() {
               <img src={speed} alt="" className='icon' />
               <p>{fighter.powerstats.speed}</p>
           </section>
-
         <img src={fighter.images.md} className="shakeImg" alt="" />
       </section>
-      <section className='fighterStats'>
-        <button onClick={letsFight} className='letsFightButton'>Fight</button>
-        <h2 style={{color: "white"}}>{winner}</h2>
+
+      <section className="middleCol">
+        <section className='fighterStats'>
+          <button onClick={letsFight} className='letsFightButton'>Fight</button>
+          <h2 style={{color: "white"}}>{winner}</h2>
+        </section>
+        <section className="winnersArea">
+          <img src={loadingScreen} alt="" className='loadingGif'/>
+        </section>
       </section>
-      <section className="winnersArea">
-        <img src={fighting} alt="" />
-      </section>
+      
       <section  className='fighterBox'>
         <input type="text" onChange={searchInput}/>
         <button onClick={fetchFighterTwo}>Get Fighter</button>
-        {/* only show if defined */}
+  
         <h2>{fighterTwo.name}</h2>
-
         <p>Strength: {fighterTwo.powerstats.strength}</p>
         <p>Intelligence: {fighterTwo.powerstats.intelligence}</p>
         <p>Power: {fighterTwo.powerstats.power}</p>
