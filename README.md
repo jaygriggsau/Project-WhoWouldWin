@@ -48,7 +48,9 @@ Simply select two fighters and make them fight to see who the winner is!
 - Push to git often
 - Working with API's and getting data from large and nested objects.
 - How to work with React functional components 
+- Use a CSS Framework
 
 ## :National Park: Future features
 - Reset only one fighter at a time not whole page.
 - Crate a database of searachable stats
+- Create fighters as a card with stats and data on the back
