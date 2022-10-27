@@ -1,7 +1,7 @@
 # Who Would Win
 Who would win in a website that you can use to fins out who is the strongest hero or villian in the universe!
 
-![]([img]http://i.imgur.com/Fkk92M7h.gif[/img])
+![](http://i.imgur.com/Fkk92M7h.gif)
 
 # Usecase
 -Your younger sibling or kids are arguning non stop over who is the strongest, Wolverine or Batman? Spiderman or Thanos? Well now you can have your answer.
