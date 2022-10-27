@@ -4,7 +4,9 @@ Who would win in a website that you can use to fins out who is the strongest her
 ![](http://i.imgur.com/Fkk92M7h.gif)
 
 # Usecase
--Your younger sibling or kids are arguning non stop over who is the strongest, Wolverine or Batman? Spiderman or Thanos? Well now you can have your answer.
+-Your younger sibling or kids are arguing non stop over who is the strongest, Wolverine or Batman? Spiderman or Thanos? Well now you can have your answer.
+
+Simply select two fighters and make them fight to see who the winner is!
 
 ## :computer: [Click here](https://whowouldwin.surge.sh/) to see my live project!
 
@@ -21,7 +23,7 @@ Who would win in a website that you can use to fins out who is the strongest her
 
 1) Clarified the idea and used figma to create some mockups
 2) Map out workflow and divided task into trello actions
-3) Aimed for MVP one by Wed. night so I would have time to work on CSS.
+3) Aimed for MVP done by Wed. night so I would have time to work on CSS.
 4) After getting to MVP I was able to start working on the design of my site.
 
 
@@ -39,7 +41,7 @@ Who would win in a website that you can use to fins out who is the strongest her
 - Tweak algorithim 
 
 ## :sob: Lessons learnt
-- Planning early helped me toget started, and helpedd whenI got stuck.
+- Planning early helped me to get started, and helped when I got stuck.
 - Push to git often
 - Working with API's and getting data from large and nested objects.
 - How to work with React functional components 
