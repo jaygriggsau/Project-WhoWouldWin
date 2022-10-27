@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+# Who Would Win
+Who would win in a website that you can use to fins out who is the strongest hero or villian in the universe!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## :computer: [Click here](https://whowouldwin.surge.sh/) to see my live project!
 
-## Available Scripts
+## :speech_balloon: About
+- Users can choose any fighter they want
+- The website shows you the stats for that fighter
+- When the user logs in, they can create a profile with the following fields to fill out.
 
-In the project directory, you can run:
 
-### `npm start`
+## :memo: Planning:
+## Sketchs for the initial idea:
+- There are the sketchs used to start the project.
+![](src/Images/planning.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Working in a team of 3 people, we drew up a plan as follows:
+1) Clarifies the idea and used figma to create some mockups
+2) Map out workflow and divide tasks.
+3) Aimed for MVP one by Wed. night so I would have time to work on CSS.
+4) After getting to MVP I was able to start working on the design of my site.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## :rocket: Cool tech
+- HTML
+- Javascript
+- React.js
+- Animations with CSS3
+- Trello
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## :scream: Bugs to fix :poop:
+- Make mobile responsive
+- Break it down into more components.
+- Improved error handling
+- Tweak algorithim 
 
-### `npm run build`
+## :sob: Lessons learnt
+- Planning early helped me toget started, and helpedd whenI got stuck.
+- Push to git often
+- Working with API's and getting data from large and nested objects.
+- How to work with React functional components 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## :National Park: Future features
+- Reset only one fighter at a time not whole page.
+- Crate a database of searachable stats

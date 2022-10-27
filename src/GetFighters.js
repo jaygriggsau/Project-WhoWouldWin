@@ -28,8 +28,8 @@ const initialfighterData = {
 function GetFighters() {
   const [fighter, setFighter] = useState(initialfighterData)
   const [fighterTwo, setFighterTwo] = useState(initialfighterData)
-  const [fighterOneSearch, setFighterOneSearch] = useState(undefined)
-  const [fighterTwoSearch, setFighterTwoSearch] = useState(undefined)
+  // const [fighterOneSearch, setFighterOneSearch] = useState(undefined)
+  // const [fighterTwoSearch, setFighterTwoSearch] = useState(undefined)
   const [winner, setWinner] = useState("")
   const [loadingScreen, setLoadingScreen] = useState(undefined)
   const [instructions, setInstructions] = useState("Search for a hero and click Get Fighter to lock them in. Once you have selected two fighters, click the Fight button to make them fight!")
@@ -59,10 +59,7 @@ function GetFighters() {
     fetch(url, options) 
       .then(res => res.json())
       .then(res => {setFighter(res)})
-    
     }
-
-    
   }
 
   const fetchFighterTwo = () => {
@@ -106,7 +103,7 @@ function GetFighters() {
         setWinner(fighterTwo.name + ' Wins')
         setLoadingScreen("")
       }
-  }, 5000)
+  }, 5600)
 
   }
 
