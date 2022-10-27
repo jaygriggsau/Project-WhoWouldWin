@@ -147,6 +147,6 @@ button {
 .instructions {
   display: flex;
   max-width: 490px;
-  justify-content: center;
+  /* justify-content: center; */
   margin: 0 auto;
 }

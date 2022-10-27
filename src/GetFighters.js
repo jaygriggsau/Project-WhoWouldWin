@@ -29,6 +29,7 @@ function GetFighters() {
   const [fighterTwo, setFighterTwo] = useState(initialfighterData)
   const [winner, setWinner] = useState("")
   const [loadingScreen, setLoadingScreen] = useState(undefined)
+  const [instructions, setInstructions] = useState("Search for a hero a click Get Fighter to lock them in. Once you have selected two fighters, click the Fight button to make them fight!")
   
   const searchInput = event => {
     const newContent = event.target.value
@@ -76,6 +77,7 @@ function GetFighters() {
     let fighterTwoScore = fighterTwo.powerstats.strength + fighterTwo.powerstats.intelligence + fighterTwo.powerstats.power + fighterTwo.powerstats.combat + fighterTwo.powerstats.durability + fighterTwo.powerstats.speed
 
     setLoadingScreen(fighting)
+    setInstructions("")
     
     setTimeout(function () {
       if (fighterOneScore > fighterTwoScore){
@@ -94,6 +96,11 @@ function GetFighters() {
   }
 
   return (
+
+    <div>
+    <section className='instructions'>
+        <h2 style={{color: "white"}}>{instructions}</h2>
+      </section>
     <div className="BattlePage">
       
       <section className='fighterBox'>
@@ -149,6 +156,7 @@ function GetFighters() {
         <img src={fighterTwo.images.md} className="shakeImg" alt="" />
       </section>
       
+    </div>
     </div>
   )
     
