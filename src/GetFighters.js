@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import TestComponent from './TestComponent'
 import speed from './Images/speed.png'
 import combat from './Images/combat.png'
 import durability from './Images/durability.png'
@@ -22,7 +21,7 @@ const initialfighterData = {
     intelligence: undefined,
     speed: undefined
   },
-  search: "hulk"
+  search: undefined
 }
 
 function GetFighters() {
@@ -31,6 +30,7 @@ function GetFighters() {
   const [winner, setWinner] = useState("")
   const [loadingScreen, setLoadingScreen] = useState(undefined)
   const [instructions, setInstructions] = useState("Search for a hero and click Get Fighter to lock them in. Once you have selected two fighters, click the Fight button to make them fight!")
+  const [errorMessage, setErrorMessage] = useState("")
   
   const searchInput = event => {
     const newContent = event.target.value
@@ -41,7 +41,10 @@ function GetFighters() {
   const fetchFighter = () => {
     console.log(fighter.search)
 
-    const url = `https://superhero-search.p.rapidapi.com/api/?hero=${fighter.search}`
+    if (fighter.search == undefined) {
+      setErrorMessage("Please Select a Fighter")
+    } else {
+      const url = `https://superhero-search.p.rapidapi.com/api/?hero=${fighter.search}`
 
     const options = {
       method: 'GET',
@@ -53,12 +56,19 @@ function GetFighters() {
     fetch(url, options) 
       .then(res => res.json())
       .then(res => {setFighter(res)})
+
+    }
+
+    
   }
 
   const fetchFighterTwo = () => {
     console.log(fighterTwo.search)
-
-    const url = `https://superhero-search.p.rapidapi.com/api/?hero=${fighter.search}`
+    
+    if (fighterTwo.search == undefined){
+      setErrorMessage("Please Select a Fighter")
+    } else {
+      const url = `https://superhero-search.p.rapidapi.com/api/?hero=${fighter.search}`
 
     const options = {
       method: 'GET',
@@ -70,6 +80,8 @@ function GetFighters() {
     fetch(url, options) 
       .then(res => res.json())
       .then(res => {setFighterTwo(res)})
+
+    }   
   }
 
   const letsFight = () => {
@@ -102,7 +114,6 @@ function GetFighters() {
       <section className='instructions'>
         <h2 style={{color: "white"}}>{instructions}</h2>
       </section>
-   
       <div className="BattlePage">
       
         <section className='fighterBox'>
@@ -134,6 +145,9 @@ function GetFighters() {
             <button onClick={letsFight} className='letsFightButton'>Fight</button>
             <button onClick={refreshPage}>Reset</button>
           </section>
+          <section>
+            <h2 style={{color: "orangered"}}>{errorMessage}</h2>
+            </section>
           <section className="winnersArea">
             <h2 id='winnerText' style={{color: "white"}}>{winner}</h2>
             <img src={loadingScreen} alt="" className='loadingGif'/>
@@ -163,7 +177,7 @@ function GetFighters() {
           <img src={fighterTwo.images.md} className="shakeImg fighterImg" alt="" />
         </section>
       </div>
-      <section className="iconList">
+      <section className="iconList" style={{color: "white"}}>
             <section className='fighterStatsTop'>
               <img src={strength} className="icon" alt="" />
               <p>Strength</p>
