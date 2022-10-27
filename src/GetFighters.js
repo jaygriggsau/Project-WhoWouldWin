@@ -76,16 +76,23 @@ function GetFighters() {
     let fighterTwoScore = fighterTwo.powerstats.strength + fighterTwo.powerstats.intelligence + fighterTwo.powerstats.power + fighterTwo.powerstats.combat + fighterTwo.powerstats.durability + fighterTwo.powerstats.speed
 
     setLoadingScreen(fighting)
-
-    if (fighterOneScore > fighterTwoScore){
-      console.log(fighter.name)
-      setWinner(fighter.name + ' wins')
-    } else {
-      console.log(fighterTwo.name + ' wins')
-      setWinner(fighterTwo.name + ' wins')
-    }
-  }
     
+    setTimeout(function () {
+      if (fighterOneScore > fighterTwoScore){
+        setWinner(fighter.name + ' wins')
+        setLoadingScreen("")
+      } else {
+        setWinner(fighterTwo.name + ' wins')
+        setLoadingScreen("")
+      }
+  }, 5000)
+
+  }
+
+  const refreshPage = () => {
+    window.location.reload(false)
+  }
+
   return (
     <div className="BattlePage">
       <section className='fighterBox'>
@@ -115,9 +122,10 @@ function GetFighters() {
       <section className="middleCol">
         <section className='fighterStats'>
           <button onClick={letsFight} className='letsFightButton'>Fight</button>
-          <h2 style={{color: "white"}}>{winner}</h2>
+          <button onClick={refreshPage}>Reset</button>
         </section>
         <section className="winnersArea">
+          <h2 id='winnerText' style={{color: "white"}}>{winner}</h2>
           <img src={loadingScreen} alt="" className='loadingGif'/>
         </section>
       </section>
