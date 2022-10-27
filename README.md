@@ -1,6 +1,11 @@
 # Who Would Win
 Who would win in a website that you can use to fins out who is the strongest hero or villian in the universe!
 
+![](src/Images/projectSite.gif)
+
+# Usecase
+-Your younger sibling or kids are arguning non stop over who is the strongest, Wolverine or Batman? Spiderman or Thanos? Well now you can have your answer.
+
 ## :computer: [Click here](https://whowouldwin.surge.sh/) to see my live project!
 
 ## :speech_balloon: About
@@ -14,9 +19,8 @@ Who would win in a website that you can use to fins out who is the strongest her
 - There are the sketchs used to start the project.
 ![](src/Images/planning.png)
 
-- Working in a team of 3 people, we drew up a plan as follows:
-1) Clarifies the idea and used figma to create some mockups
-2) Map out workflow and divide tasks.
+1) Clarified the idea and used figma to create some mockups
+2) Map out workflow and divided task into trello actions
 3) Aimed for MVP one by Wed. night so I would have time to work on CSS.
 4) After getting to MVP I was able to start working on the design of my site.
 
