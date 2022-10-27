@@ -1,7 +1,7 @@
 # Who Would Win
 Who would win in a website that you can use to fins out who is the strongest hero or villian in the universe!
 
-![](src/Images/projectSite.gif)
+![]([img]http://i.imgur.com/Fkk92M7h.gif[/img])
 
 # Usecase
 -Your younger sibling or kids are arguning non stop over who is the strongest, Wolverine or Batman? Spiderman or Thanos? Well now you can have your answer.
@@ -17,7 +17,7 @@ Who would win in a website that you can use to fins out who is the strongest her
 ## :memo: Planning:
 ## Sketchs for the initial idea:
 - There are the sketchs used to start the project.
-![](https://imgur.com/Fkk92M7.gif)
+![](src/Images/planning.png)
 
 1) Clarified the idea and used figma to create some mockups
 2) Map out workflow and divided task into trello actions
