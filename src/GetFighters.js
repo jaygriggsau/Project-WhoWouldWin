@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import TestComponent from './TestComponent'
 import speed from './Images/speed.png'
 import combat from './Images/combat.png'
 import durability from './Images/durability.png'
@@ -29,7 +30,7 @@ function GetFighters() {
   const [fighterTwo, setFighterTwo] = useState(initialfighterData)
   const [winner, setWinner] = useState("")
   const [loadingScreen, setLoadingScreen] = useState(undefined)
-  const [instructions, setInstructions] = useState("Search for a hero a click Get Fighter to lock them in. Once you have selected two fighters, click the Fight button to make them fight!")
+  const [instructions, setInstructions] = useState("Search for a hero and click Get Fighter to lock them in. Once you have selected two fighters, click the Fight button to make them fight!")
   
   const searchInput = event => {
     const newContent = event.target.value
@@ -81,10 +82,10 @@ function GetFighters() {
     
     setTimeout(function () {
       if (fighterOneScore > fighterTwoScore){
-        setWinner(fighter.name + ' wins')
+        setWinner(fighter.name + ' Wins')
         setLoadingScreen("")
       } else {
-        setWinner(fighterTwo.name + ' wins')
+        setWinner(fighterTwo.name + ' Wins')
         setLoadingScreen("")
       }
   }, 5000)
@@ -98,65 +99,91 @@ function GetFighters() {
   return (
 
     <div>
-    <section className='instructions'>
+      <section className='instructions'>
         <h2 style={{color: "white"}}>{instructions}</h2>
       </section>
-    <div className="BattlePage">
+   
+      <div className="BattlePage">
       
-      <section className='fighterBox'>
-        <input type="text" onChange={searchInput}/>
-        <button onClick={fetchFighter}>Get Fighter</button>
+        <section className='fighterBox'>
+          <input type="text" onChange={searchInput}/>
+          <button onClick={fetchFighter}>Get Fighter</button>
 
-        <h2>{fighter.name}</h2>
+          <h2>{fighter.name}</h2>
+            <section className="fighterStatsTop">
+              <img src={strength} alt="" className='icon' />
+              <p>{fighter.powerstats.strength}</p>
+              <img src={intelligence} alt=""className='icon' />
+              <p>{fighter.powerstats.intelligence}</p>
+              <img src={power} alt="" className='icon' />
+              <p>{fighter.powerstats.power}</p>
+            </section>
+            <section className="fighterStatsBottom">
+                <img src={combat} alt="" className='icon' />
+                <p>{fighter.powerstats.combat}</p>
+                <img src={durability} alt="" className='icon' />
+                <p>{fighter.powerstats.durability}</p>
+                <img src={speed} alt="" className='icon' />
+                <p>{fighter.powerstats.speed}</p>
+            </section>
+          <img src={fighter.images.md} className="shakeImg fighterImg" alt="" />
+        </section>
+
+        <section className="middleCol">
+          <section className='fighterStats'>
+            <button onClick={letsFight} className='letsFightButton'>Fight</button>
+            <button onClick={refreshPage}>Reset</button>
+          </section>
+          <section className="winnersArea">
+            <h2 id='winnerText' style={{color: "white"}}>{winner}</h2>
+            <img src={loadingScreen} alt="" className='loadingGif'/>
+          </section>
+          <section className="iconList">
+            <section className='fighterStatsTop'>
+              <img src={strength} className="icon" alt="" />
+              <p>Strength</p>
+              <img src={intelligence} className="icon" alt="" />
+              <p>Intelligence</p>
+            </section>
+            <section className='fighterStatsTop'>
+              <img src={power} className="icon" alt="" />
+              <p>Power</p>
+              <img src={combat} className="icon" alt="" />
+              <p>Combat</p>
+            </section>
+            <section className='fighterStatsBottom'>
+              <img src={durability} className="icon" alt="" />
+              <p>Durability</p>
+              <img src={speed} className="icon" alt="" />
+              <p>Speed</p>
+            </section>
+          </section>
+        </section>
+        
+        <section  className='fighterBox'>
+          <input type="text" onChange={searchInput}/>
+          <button onClick={fetchFighterTwo}>Get Fighter</button>
+          <h2>{fighterTwo.name}</h2>
           <section className="fighterStatsTop">
-            <img src={strength} alt="" className='icon' />
-            <p>{fighter.powerstats.strength}</p>
-            <img src={intelligence} alt=""className='icon' />
-            <p>{fighter.powerstats.intelligence}</p>
-            <img src={power} alt="" className='icon' />
-            <p>{fighter.powerstats.power}</p>
-          </section>
-          <section className="fighterStatsBottom">
-              <img src={combat} alt="" className='icon' />
-              <p>{fighter.powerstats.combat}</p>
-              <img src={durability} alt="" className='icon' />
-              <p>{fighter.powerstats.durability}</p>
-              <img src={speed} alt="" className='icon' />
-              <p>{fighter.powerstats.speed}</p>
-          </section>
-        <img src={fighter.images.md} className="shakeImg" alt="" />
-      </section>
-
-      <section className="middleCol">
-        <section className='fighterStats'>
-          <button onClick={letsFight} className='letsFightButton'>Fight</button>
-          <button onClick={refreshPage}>Reset</button>
+              <img src={strength} alt="" className='icon' />
+              <p>{fighterTwo.powerstats.strength}</p>
+              <img src={intelligence} alt=""className='icon' />
+              <p>{fighterTwo.powerstats.intelligence}</p>
+              <img src={power} alt="" className='icon' />
+              <p>{fighterTwo.powerstats.power}</p>
+            </section>
+            <section className="fighterStatsBottom">
+                <img src={combat} alt="" className='icon' />
+                <p>{fighterTwo.powerstats.combat}</p>
+                <img src={durability} alt="" className='icon' />
+                <p>{fighterTwo.powerstats.durability}</p>
+                <img src={speed} alt="" className='icon' />
+                <p>{fighterTwo.powerstats.speed}</p>
+            </section>
+          <img src={fighterTwo.images.md} className="shakeImg fighterImg" alt="" />
         </section>
-        <section className="winnersArea">
-          <h2 id='winnerText' style={{color: "white"}}>{winner}</h2>
-          <img src={loadingScreen} alt="" className='loadingGif'/>
-        </section>
-        <section>
-
-        </section>
-      </section>
       
-      <section  className='fighterBox'>
-        <input type="text" onChange={searchInput}/>
-        <button onClick={fetchFighterTwo}>Get Fighter</button>
-  
-        <h2>{fighterTwo.name}</h2>
-        <p>Strength: {fighterTwo.powerstats.strength}</p>
-        <p>Intelligence: {fighterTwo.powerstats.intelligence}</p>
-        <p>Power: {fighterTwo.powerstats.power}</p>
-        <p>Combat: {fighterTwo.powerstats.combat}</p>
-        <p>Durability: {fighterTwo.powerstats.durability}</p>
-        <p>Speed: {fighterTwo.powerstats.speed}</p>
-
-        <img src={fighterTwo.images.md} className="shakeImg" alt="" />
-      </section>
-      
-    </div>
+      </div>
     </div>
   )
     
