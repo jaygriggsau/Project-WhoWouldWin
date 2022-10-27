@@ -11,9 +11,9 @@ Simply select two fighters and make them fight to see who the winner is!
 ## :computer: [Click here](https://whowouldwin.surge.sh/) to see my live project!
 
 ## :speech_balloon: About
-- Users can choose any fighter they want
+- Users can choose any fighter they want and see who is strongest
 - The website shows you the stats for that fighter
-- When the user logs in, they can create a profile with the following fields to fill out.
+
 
 
 ## :memo: Planning:
