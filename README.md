@@ -3,6 +3,8 @@ Who would win is a website that you can use to finds out who is the strongest he
 
 A simple to use front end React.js app using functional components.
 
+## :computer: [Click here](https://whowouldwin.surge.sh/) to see my live project!
+
 ![](http://i.imgur.com/Fkk92M7h.gif)
 
 # Personal Aim
@@ -13,11 +15,10 @@ I wanted to have a focus on CSS, React.js and functional components.
 
 Simply select two fighters and make them fight to see who the winner is!
 
-## :computer: [Click here](https://whowouldwin.surge.sh/) to see my live project!
+## :speech_balloon: Issues
+- I had an error in my useEffect and that caused my fetch request to loop. I didnt notice and it chewed my monhtly quota and didnt report an error. I spent a long time figuring that out.
 
-## :speech_balloon: About
-- Users can choose any fighter they want and see who is strongest
-- The website shows you the stats for that fighter
+- CSS took me longer than I wanted, should have used a CSS framework.
 
 ## :memo: Planning:
 ## Sketchs for the initial idea:
@@ -50,7 +51,7 @@ Simply select two fighters and make them fight to see who the winner is!
 - How to work with React functional components 
 - Use a CSS Framework
 
-## :National Park: Future features
+##  Future features
 - Reset only one fighter at a time not whole page.
 - Crate a database of searachable stats
 - Create fighters as a card with stats and data on the back
