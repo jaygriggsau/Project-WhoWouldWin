@@ -17,7 +17,7 @@ Who would win in a website that you can use to fins out who is the strongest her
 ## :memo: Planning:
 ## Sketchs for the initial idea:
 - There are the sketchs used to start the project.
-![](src/Images/planning.png)
+![](https://imgur.com/Fkk92M7.gif)
 
 1) Clarified the idea and used figma to create some mockups
 2) Map out workflow and divided task into trello actions
