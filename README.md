@@ -1,10 +1,10 @@
 # Who Would Win
-Who would win in a website that you can use to fins out who is the strongest hero or villian in the universe!
+Who would win in a website that you can use to fins out who is the strongest hero or villian in the universe! A simple to use Reac.js app.
 
 ![](http://i.imgur.com/Fkk92M7h.gif)
 
 # Usecase
--Your younger sibling or kids are arguing non stop over who is the strongest, Wolverine or Batman? Spiderman or Thanos? Well now you can have your answer.
+-Your younger siblings or kids are arguing non stop over who is the strongest, Wolverine or Batman? Spiderman or Thanos? Well now you can have your answer.
 
 Simply select two fighters and make them fight to see who the winner is!
 
