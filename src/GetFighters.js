@@ -138,26 +138,6 @@ function GetFighters() {
             <h2 id='winnerText' style={{color: "white"}}>{winner}</h2>
             <img src={loadingScreen} alt="" className='loadingGif'/>
           </section>
-          <section className="iconList">
-            <section className='fighterStatsTop'>
-              <img src={strength} className="icon" alt="" />
-              <p>Strength</p>
-              <img src={intelligence} className="icon" alt="" />
-              <p>Intelligence</p>
-            </section>
-            <section className='fighterStatsTop'>
-              <img src={power} className="icon" alt="" />
-              <p>Power</p>
-              <img src={combat} className="icon" alt="" />
-              <p>Combat</p>
-            </section>
-            <section className='fighterStatsBottom'>
-              <img src={durability} className="icon" alt="" />
-              <p>Durability</p>
-              <img src={speed} className="icon" alt="" />
-              <p>Speed</p>
-            </section>
-          </section>
         </section>
         
         <section  className='fighterBox'>
@@ -182,8 +162,28 @@ function GetFighters() {
             </section>
           <img src={fighterTwo.images.md} className="shakeImg fighterImg" alt="" />
         </section>
-      
       </div>
+      <section className="iconList">
+            <section className='fighterStatsTop'>
+              <img src={strength} className="icon" alt="" />
+              <p>Strength</p>
+              <img src={intelligence} className="icon" alt="" />
+              <p>Intelligence</p>
+              <img src={power} className="icon" alt="" />
+              <p>Power</p>
+            </section>
+            <section className='fighterStatsTop'>
+              <img src={combat} className="icon" alt="" />
+              <p>Combat</p>
+              <img src={durability} className="icon" alt="" />
+              <p>Durability</p>
+              <img src={speed} className="icon" alt="" />
+              <p>Speed</p>
+            </section>
+            <section className='fighterStatsBottom'>
+              
+            </section>
+          </section>
     </div>
   )
     
