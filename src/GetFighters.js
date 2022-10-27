@@ -5,6 +5,7 @@ import durability from './Images/durability.png'
 import intelligence from './Images/intelligence.png'
 import strength from './Images/strength.png'
 import power from './Images/power.png'
+import fighting from './Images/fighting.gif'
 
 
 const initialfighterData = {
@@ -26,7 +27,8 @@ const initialfighterData = {
 function GetFighters() {
   const [fighter, setFighter] = useState(initialfighterData)
   const [fighterTwo, setFighterTwo] = useState(initialfighterData)
-  const [winner, setWinner]=useState("")
+  const [winner, setWinner] = useState("")
+  const [loadingScreen, setLoadingScreen] = useState(undefined)
   
   const searchInput = event => {
     const newContent = event.target.value
@@ -73,12 +75,14 @@ function GetFighters() {
 
     let fighterTwoScore = fighterTwo.powerstats.strength + fighterTwo.powerstats.intelligence + fighterTwo.powerstats.power + fighterTwo.powerstats.combat + fighterTwo.powerstats.durability + fighterTwo.powerstats.speed
 
+    setLoadingScreen(fighting)
+
     if (fighterOneScore > fighterTwoScore){
       console.log(fighter.name)
-      setWinner(fighter.name)
+      setWinner(fighter.name + ' wins')
     } else {
-      console.log(fighterTwo.name)
-      setWinner(fighterTwo.name)
+      console.log(fighterTwo.name + ' wins')
+      setWinner(fighterTwo.name + ' wins')
     }
   }
     
@@ -108,9 +112,12 @@ function GetFighters() {
 
         <img src={fighter.images.md} className="shakeImg" alt="" />
       </section>
-      <section >
+      <section className='fighterStats'>
         <button onClick={letsFight} className='letsFightButton'>Fight</button>
-        <p>{winner}</p>
+        <h2 style={{color: "white"}}>{winner}</h2>
+      </section>
+      <section className="winnersArea">
+        <img src={fighting} alt="" />
       </section>
       <section  className='fighterBox'>
         <input type="text" onChange={searchInput}/>
@@ -128,13 +135,9 @@ function GetFighters() {
         <img src={fighterTwo.images.md} className="shakeImg" alt="" />
       </section>
       
-      
     </div>
   )
     
-  
-  
-
 }
 
 export default GetFighters

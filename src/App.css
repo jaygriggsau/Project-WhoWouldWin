@@ -12,6 +12,7 @@ body {
 
 p {
   padding: 0px;
+  font: white;
   margin: 0px;
   font-family: 'Merriweather Sans', sans-serif;
   font-size: 20px;
@@ -21,15 +22,18 @@ h1 {
   font-family: 'Rubik Dirt', cursive;
   color: white;
   font-size: 50px;
-  margin-top: 10;
+  margin-top: 10px;
   margin-bottom: 10px;
   
 }
 
 h2 {
+  font-family: 'Rubik Dirt', cursive;
+  font: white;
   margin-top: 5px;
   margin-bottom: 5px;
   padding: 0px;
+  text-align: center;
 }
 
 input {
@@ -56,18 +60,19 @@ input {
   margin-left: 25px;
   margin-right: 25px;
   align-items: center;
+  justify-content: center;
 }
 
 .letsFightButton:hover {
   text-decoration: none;
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
 
 button, input[type="submit"], input[type="reset"] {
   background: none;
   color: inherit;
   border: none;
-  padding: 0;
+  padding: 0px;
   font: inherit;
   cursor: pointer;
   outline: inherit;
@@ -113,8 +118,11 @@ button {
   max-width: 50px;
   margin: 5px;
   padding: 5px;
+  border-radius: 15px;
 }
-
+.fighterStats {
+  text-align: center;
+}
 .fighterStatsTop {
   display:flex;
   justify-content: center;
