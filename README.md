@@ -1,7 +1,7 @@
 # Who Would Win
-Who would win in a website that you can use to fins out who is the strongest hero or villian in the universe! 
+Who would win is a website that you can use to finds out who is the strongest hero or villian in the universe! 
 
-A simple to use React.js app using functional components.
+A simple to use front end React.js app using functional components.
 
 ![](http://i.imgur.com/Fkk92M7h.gif)
 
