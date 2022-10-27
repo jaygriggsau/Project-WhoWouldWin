@@ -6,10 +6,10 @@ A simple to use front end React.js app using functional components.
 ![](http://i.imgur.com/Fkk92M7h.gif)
 
 # Personal Aim
-I wanted to have a focus on CSS.
+I wanted to have a focus on CSS, React.js and functional components.
 
 # Usecase
--Your younger siblings or kids are arguing non stop over who is the strongest, Wolverine or Batman? Spiderman or Thanos? Well now you can have your answer.
+- Your younger siblings or kids are arguing non stop over who is the strongest, Wolverine or Batman? Spiderman or Thanos? Well now you can have your answer.
 
 Simply select two fighters and make them fight to see who the winner is!
 
