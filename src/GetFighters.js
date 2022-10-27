@@ -6,6 +6,7 @@ import intelligence from './Images/intelligence.png'
 import strength from './Images/strength.png'
 import power from './Images/power.png'
 import fighting from './Images/fighting.gif'
+import fight from './Sounds/fight.wav'
 
 
 const initialfighterData = {
@@ -93,7 +94,10 @@ function GetFighters() {
 
     setLoadingScreen(fighting)
     setInstructions("")
-    
+
+    var audio = new Audio(fight);
+    audio.play(); 
+
     setTimeout(function () {
       if (fighterOneScore > fighterTwoScore){
         setWinner(fighter.name + ' Wins')

@@ -147,6 +147,5 @@ button {
 .instructions {
   display: flex;
   max-width: 490px;
-
   margin: 0 auto;
 }
