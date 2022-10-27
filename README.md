@@ -20,6 +20,8 @@ Simply select two fighters and make them fight to see who the winner is!
 
 - CSS took me longer than I wanted, should have used a CSS framework.
 
+- I had problems getting nested properties of the response, I needed to intialise the useState with the properties of the object I wanted.
+
 ## :memo: Planning:
 ## Sketchs for the initial idea:
 - There are the sketchs used to start the project.
